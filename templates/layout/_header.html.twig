@@ -1,0 +1,18 @@
+<header class="app-header">
+    <a href="{{ path('app_home') }}" class="app-logo" title="Retour à l'accueil">
+        <img src="{{ asset('build/images/logo.png') }}" alt="Logo Vinylothèque" />
+    </a>
+    <h1>{{ pageTitle }}</h1>
+
+    {% include 'layout/_navigation.html.twig' %}
+
+    {% if app.user %}
+        <a href="{{ path('app_logout') }}" onclick="return window.confirm('Vous partez ?')" title="Déconnexion">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+    {% else %}
+        <a href="{{ path('app_login') }}" title="Connexion">
+            <i class="fa-solid fa-right-to-bracket"></i>
+        </a>
+    {% endif %}
+</header>

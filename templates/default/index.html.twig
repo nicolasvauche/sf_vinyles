@@ -1,0 +1,26 @@
+{% extends 'layout/_default.html.twig' %}
+
+{% block title %}Hello{% endblock %}
+
+{% block main %}
+    <h2>
+        Bonjour
+        {% if app.user %}
+            {{ app.user.pseudo }}
+        {% endif %}
+    </h2>
+
+    {% if albums %}
+        {% if(albums | length > 0) %}
+            <p>
+                <strong>Vous avez {{ albums | length }} album(s)</strong>
+            </p>
+
+            <ul>
+                {% for album in albums %}
+                    <li><strong>[{{ album.category.name }}]</strong> {{ album.artist.name }} / {{ album.title }} / {{ album.year }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+{% endblock %}

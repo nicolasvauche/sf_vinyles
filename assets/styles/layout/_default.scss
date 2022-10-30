@@ -1,0 +1,10 @@
+html {
+    body {
+        @include displayFlex(column, center, space-between);
+        min-height: 100vh;
+        font-family: $font-primary;
+        color: $color-black;
+        background-color: $color-white;
+    }
+
+}

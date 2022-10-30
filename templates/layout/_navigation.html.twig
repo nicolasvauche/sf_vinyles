@@ -1,0 +1,9 @@
+{% if app.user %}
+    <nav class="app-navigation">
+        <a href="{{ path('app_home') }}" class="app-logo" title="Retour à l'accueil">Accueil</a>
+        {% if not is_granted('ROLE_ADMIN') %}
+            |
+            <a href="{{ path('app_search') }}">Recherche Discogs</a>
+        {% endif %}
+    </nav>
+{% endif %}

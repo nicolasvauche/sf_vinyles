@@ -1,0 +1,52 @@
+h1 {
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-black;
+}
+
+h2 {
+    margin: 1.75rem 0;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $color-primary;
+}
+
+p {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+li {
+    margin-bottom: 1rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    color: $color-secondary;
+}
+
+img {
+    max-width: 100%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+pre.sf-dump,
+pre.sf-dump .sf-dump-default {
+    z-index: 9998 !important;
+}

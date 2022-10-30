@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ app_locale | u.truncate(2) }}">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>{% block title %}Loading{% endblock %} Vinyles Library</title>
+        <meta name="description" content="Ta vinylothèque en ligne !">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ asset('build/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('build/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('build/safari-pinned-tab.svg') }}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#00aba9">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+        <!-- Fontawesome -->
+        <script src="https://kit.fontawesome.com/b916232238.js" crossorigin="anonymous"></script>
+
+        <!-- Stylesheets -->
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
+        <!-- JS scripts -->
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}

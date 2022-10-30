@@ -1,0 +1,22 @@
+calliostro_discogs:
+
+  # Freely selectable and valid HTTP user agent identification (required)
+  user_agent: 'CalliostroDiscogsBundle/2.0 +https://github.com/calliostro/discogs-bundle'
+
+  # Your consumer key (recommended)
+  consumer_key: '%env(DISCOGS_CONSUMER_KEY)%'
+
+  # Your consumer secret (recommended)
+  consumer_secret: '%env(DISCOGS_CONSUMER_SECRET)%'
+
+  throttle:
+    # If activated, a new attempt is made later when the rate limit is reached
+    enabled: true
+    # Number of milliseconds to wait until the next attempt when the rate limit is reached
+    microseconds: 1000000
+
+  oauth:
+    # If enabled, full OAuth 1.0a with access token/secret is used
+    enabled: false
+    # You can create a service implementing OAuthTokenProviderInterface (HWIOAuthBundle is supported by default)
+    token_provider: calliostro_discogs.hwi_oauth_token_provider
