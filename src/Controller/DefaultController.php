@@ -40,7 +40,7 @@ class DefaultController extends AbstractController
         }
 
         return $this->renderForm('default/search.html.twig', [
-            'pageTitle' => 'Recherche Discogs API',
+            'pageTitle' => 'Discogs API Search Engine',
             'form' => $form,
         ]);
     }

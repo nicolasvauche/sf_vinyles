@@ -50,3 +50,7 @@ pre.sf-dump,
 pre.sf-dump .sf-dump-default {
     z-index: 9998 !important;
 }
+
+.app-flex {
+    @include displayFlex(row, center, center, 1rem);
+}

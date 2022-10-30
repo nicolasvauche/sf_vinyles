@@ -1,0 +1,23 @@
+.app-btn {
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-family: $font-secondary;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: none;
+    color: $color-white;
+    background-color: $color-primary;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &.cta {
+        font-size: 1.25rem;
+        background-color: $color-secondary;
+    }
+
+    &:hover {
+        background-color: $color-black;
+    }
+}

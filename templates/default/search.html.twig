@@ -3,8 +3,19 @@
 {% block title %}Discogs API into{% endblock %}
 
 {% block main %}
+    <h2>Rechercher sur l'API Discogs</h2>
+
     {{ form_start(form, {'attr': {'class': 'app-form'}}) }}
-    {{ form_widget(form) }}
-    <button type="submit">Rechercher</button>
+    <div class="form-group">
+        <label for="{{ form.artist.vars.id }}">{{ form.artist.vars.label }}</label>
+        {{ form_widget(form.artist) }}
+    </div>
+    <div class="form-group">
+        <label for="{{ form.album.vars.id }}">{{ form.album.vars.label }}</label>
+        {{ form_widget(form.album) }}
+    </div>
+    <div class="form-group">
+        <button type="submit" class="app-btn cta">Rechercher</button>
+    </div>
     {{ form_end(form) }}
 {% endblock %}

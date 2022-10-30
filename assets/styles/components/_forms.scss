@@ -2,11 +2,29 @@
     padding: 2rem;
     background-color: rgba($color-fifth, 0.25);
 
-    div {
+    .form-group {
         margin-bottom: 1rem;
-    }
+        text-align: left;
 
-    label {
-        margin-right: 0.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-family: $font-secondary;
+            letter-spacing: 1px;
+        }
+
+        .form-control {
+            box-sizing: border-box;
+            padding: 0.5rem 1rem;
+            width: 100%;
+            font-family: $font-primary;
+            font-size: 1rem;
+            border: none;
+            background-color: $color-white;
+        }
     }
 }
