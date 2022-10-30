@@ -3,9 +3,8 @@
     z-index: 9999;
     top: 0;
     @include displayFlex(row, center, space-between);
-    box-sizing: border-box;
     padding: 0.5rem 1rem;
-    width: 100vw;
+    width: calc(100vw - 2rem);
     color: $color-white;
     background-color: $color-secondary;
 

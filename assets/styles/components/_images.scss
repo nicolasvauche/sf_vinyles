@@ -1,0 +1,18 @@
+.app-img {
+    margin: 0 0 1rem 0;
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 80vw;
+        height: 80vw;
+        object-fit: cover;
+        filter: drop-shadow(1px 1px 2px rgba($color-black, 0.5));
+    }
+
+    &.rounded {
+        img {
+            border-radius: 50%;
+        }
+    }
+}

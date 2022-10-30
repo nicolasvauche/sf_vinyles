@@ -3,19 +3,58 @@
 {% block title %}Discogs API into{% endblock %}
 
 {% block main %}
-    <h2>Rechercher sur l'API Discogs</h2>
+    <section>
+        <h2>Rechercher sur l'API Discogs</h2>
 
-    {{ form_start(form, {'attr': {'class': 'app-form'}}) }}
-    <div class="form-group">
-        <label for="{{ form.artist.vars.id }}">{{ form.artist.vars.label }}</label>
-        {{ form_widget(form.artist) }}
-    </div>
-    <div class="form-group">
-        <label for="{{ form.album.vars.id }}">{{ form.album.vars.label }}</label>
-        {{ form_widget(form.album) }}
-    </div>
-    <div class="form-group">
-        <button type="submit" class="app-btn cta">Rechercher</button>
-    </div>
-    {{ form_end(form) }}
+        {{ form_start(form, {'attr': {'class': 'app-form'}}) }}
+        <div class="form-group">
+            <label for="{{ form.artist.vars.id }}" class="required">{{ form.artist.vars.label }}</label>
+            {{ form_widget(form.artist) }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.album.vars.id }}">{{ form.album.vars.label }}</label>
+            {{ form_widget(form.album) }}
+        </div>
+        <div class="form-group">
+            <button type="submit" class="app-btn cta">Rechercher</button>
+        </div>
+        {{ form_end(form) }}
+    </section>
+
+    {% if(artist) %}
+        <section>
+            <h2>{{ artist['name'] }}</h2>
+            <figure class="app-img rounded">
+                <img src="{{ artist['cover'] }}" alt="{{ artist['name'] }}" />
+            </figure>
+            <p>
+                <small>Discogs id: {{ artist['discogsId'] }}</small>
+            </p>
+            <p>
+                <a href="#" class="app-btn cta">
+                    Ajouter à mes artistes
+                </a>
+            </p>
+        </section>
+    {% endif %}
+
+    {% if(album) %}
+        <section>
+            <h2>{{ album['title'] }}</h2>
+            <figure class="app-img rounded">
+                <img src="{{ album['cover'] }}" alt="{{ album['title'] }}" />
+            </figure>
+            <p>
+                <small>
+                    Year: {{ album['year'] }}<br />
+                    Discogs id: {{ album['discogsId'] }}
+                </small>
+            </p>
+            <p>
+                <a href="#" class="app-btn cta">
+                    Ajouter à mes albums
+                </a>
+            </p>
+        </section>
+    {% endif %}
 {% endblock %}

@@ -1,4 +1,10 @@
 .app-main {
     margin-bottom: 2rem;
+    padding: 0 1rem 2rem;
+    width: calc(100vw - 2rem);
     text-align: center;
+
+    section {
+        padding-bottom: 2rem;
+    }
 }

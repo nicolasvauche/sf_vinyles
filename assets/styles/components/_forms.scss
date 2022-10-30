@@ -15,6 +15,16 @@
             margin-bottom: 0.25rem;
             font-family: $font-secondary;
             letter-spacing: 1px;
+
+            &.required {
+                &:after {
+                    content: "*";
+                    font-family: $font-primary;
+                    font-weight: bold;
+                    vertical-align: super;
+                    color: $color-secondary;
+                }
+            }
         }
 
         .form-control {
