@@ -52,5 +52,5 @@ pre.sf-dump .sf-dump-default {
 }
 
 .app-flex {
-    @include displayFlex(row, center, center, 1rem);
+    @include displayFlex(row, center, center, 0.5rem);
 }
